@@ -114,10 +114,7 @@
       </div>
 
       <footer>
-        <p>&copy; {{ site.author.name }} 2012 
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
-        </p>
+        <p>&copy; {{ site.author.name }} {{ 'now' | date: "%Y" }} </p>
       </footer>
     </div> <!-- /container -->
     {% include JB/analytics %}
