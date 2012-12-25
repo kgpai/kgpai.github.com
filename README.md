@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Jekyll-Bootstrap
 
 The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
@@ -46,4 +45,3 @@ kgpai.github.com
 ================
 
 My jekyll bootstrap based blog. 
->>>>>>> ecccf53586734c94462ba8fc1243042123fa2408
