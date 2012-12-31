@@ -1,7 +1,8 @@
 ---
 layout: page
-title: About Me!
-tagline: A Software Engineer in Seattle
+title: About Me
+header: About
+group: navigation
 ---
 {% include JB/setup %}
 
