@@ -60,8 +60,14 @@ state is, and _why_ exactly that is a problem, and further how to root cause thi
 ![tcp_state](http://publib.boulder.ibm.com/infocenter/zos/v1r11/topic/com.ibm.zos.r11.halu101/dwgl0004.gif "Tcp State Diagram")
 
 The **CLOSE_WAIT** state is a passive close state, and a client's socket will continue to be in this state until it actively closes the connection. Note , that this is completely on the client side and unlike the other states in the TCP state diagram, this state doesn't have a timeout - which means it is going to be open indefinitely. 
-So what was causing this problem ? Turns out the S3 [getObject()](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObject(com.amazonaws.services.s3.model.GetObjectRequest) ) call keeps the http connection open until it is closed by the client. The anti-pattern here was a very simple: 
+So what was causing this problem ? Turns out the S3 [getObject()](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObject) call keeps the http connection open until it is closed by the client. The anti-pattern here was a very simple: 
 
- ByteStreams.copy(object.getObjectContent(), Files.newOutputStreamSupplier(temporaryScriptFile));
+
+<code>
+   
+   ByteStreams.copy(object.getObjectContent(), Files.newOutputStreamSupplier(temporaryScriptFile));
+   
+</code>
+
 
 The silent call to object.getObjectContent() wasn't closing the open connection. The best way to approach these problems is to actually create a decorator against the s3 client api and use that to access getObjectContent(). That is something I will cover in a different blog post though. 
