@@ -13,7 +13,7 @@ title : Krishna Pai
 tagline: Notes on stuff mostly related to Computing.
 author :
   name : Krishna Pai
-  email : post.krishna@gmail.com
+  email : blah@email.test
   github : kgpai
   twitter : kgpai
   feedburner : feedname
@@ -100,7 +100,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-39922960-1'
+        tracking_id : 'UA-123-12'
     getclicky :
       site_id : 
     mixpanel :
