@@ -2,8 +2,8 @@
 layout: post
 title: "Clean Code Notes II"
 description: ""
-category: 
-tags: [code, software engineering]
+category: posts 
+tags: [code, software engineering, java ]
 ---
 {% include JB/setup %}
 
