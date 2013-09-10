@@ -84,9 +84,10 @@ should do it only.
 * Decompose a higher level function into an abstraction one level below it. 
 
 * A function should then be describable as a brief TO paragraph:
+
   + TO name_of_function , we do thingummyjig while checking for
-  thingummybob. Then we check in our thinglist for result of thingummyjig
-  computation, while returning a boolean if found or not.
+     thingummybob. Then we check in our thinglist for result of thingummyjig
+     computation, while returning a boolean if found or not.
 
 * Again, the reason to write functions is to decompose a larger concept into a
 set of steps at the next level of abstraction. 
@@ -94,13 +95,15 @@ set of steps at the next level of abstraction.
 * The Stepdown Rule: Code should read like a top-down narrative. i.e You
 should be able to read the program as though it were a set of TO paragraphs
 each o which is describing the current level of abstraction and referencing
-subsequent TO paragraphs at the next level down. 
+subsequent TO paragraphs at the next level down:
+
   + To include the setups and teardowns, we include setups, then we include the
-  test page content, and then we include the teardowns.
+    test page content, and then we include the teardowns.
   + To include the setups, we include the suite setup if this is a suite, then we
-  include the regular setup.
+    include the regular setup.
   + To include the suite setup, we search the parent hierarchy for the
-  “SuiteSetUp” page and add an include statement with the path of that page.
+    “SuiteSetUp” page and add an include statement with the path of that page.
+
 
 * Switch Statements: Switch statements by nature will not be small and will
 always do N things. You can't always avoid switch statements, but you can
@@ -135,17 +138,18 @@ requires special justification - and even then shouldnt be used anyway.
   passwordAttemptFailedNtimes(int numAttempts).
 
 * Dyadic Functions:
+
   + These are naturally harder to understand than monadic functions, since it
   isnt  implicitly clear how the arguments are related to the function. Also it
   is human nature to skip some of the arguments when reading code. E.g
-  writeField(outputStream, name). Note functions like Point(0,0) even though
+  `writeField(outputStream, name)`. Note functions like `Point(0,0)` even though
   diadic in form are actually monadic in nature. Again while it is not possible
   to avoid dyadic forms it is always imperative that these be kept at a
   minimum. 
 
 * Triads - These are significantly harder to understand compared to diadic
 functions because of ordering issues, testing, etc. E.g consider a function
-like assertEquals(message, expected, actual). This will require some scrutiny
+like `assertEquals(message, expected, actual)`. This will require some scrutiny
 from the programmer if he is not to make an error. 
 
 * Have No Side Effects : As mentioned earlier functions should do one thing and
