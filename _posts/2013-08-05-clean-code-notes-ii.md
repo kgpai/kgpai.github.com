@@ -46,16 +46,16 @@ etc. Above all a class name should not be a verb.
 ** Accessors, mutators and predicates should be named for their value and
 *prefixed with get, set and is according to  the javabean standard. 
 ** When constructors are overloaded use static factory methods with names that
-*describe the arguments. 
+  describe the arguments. 
   Complex invectionPoint = Complex.FromRealNumber(12.0); 
 ** Consider enforcing their use by making corresponding constructors private. 
 ** Pick one word per concept - dont have get,fetch,retrieve in a
 *class. Similarly dont have Manager,Controller,Driver all at once. Stick to
 *one. A consistent lexicon is a very very nice thing.  
 ** Use Solution Domain Names : Use cs specific terms, algorithm names, pattern
-*names, math terms etc whenever possible. 
+ names, math terms etc whenever possible. 
 ** Use Problem Domain Names : When ever there is no such programmeresse , use
-*names that correspond do the problem domain. 
+  names that correspond do the problem domain. 
 
 Chapter 3
 ------------------
@@ -81,11 +81,11 @@ each o which is describing the current level of abstraction and referencing
 subsequent TO paragraphs at the next level down. 
 ** To include the setups and teardowns, we include setups, then we include the
 test page content, and then we include the teardowns.
-**To include the setups, we include the suite setup if this is a suite, then we
+** To include the setups, we include the suite setup if this is a suite, then we
 include the regular setup.
 ** To include the suite setup, we search the parent hierarchy for the
 “SuiteSetUp” page and add an include statement with the path of that page.
-*Switch Statements: Switch statements by nature will not be small and will
+* Switch Statements: Switch statements by nature will not be small and will
 always do N things. You can't always avoid switch statements, but you can
 ensure that they are buried in low level classes and are never repeated. One
 way to do this is by appropriately using Polymorphism. Note: That this is a
