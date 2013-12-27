@@ -8,7 +8,7 @@ group: navigation
 
 ![Me](http://www.cise.ufl.edu/~kgp/kgp-washington.jpg)
 
-Hi! I am an software engineer currently working in Seattle. Workwise I am interested in writing distributed, highly scalable software. My other interests lie in hiking (The puget sound area is awesome for that), practising my guitar (this happens very rarely though), or playing games ( happens far too frequently). 
+Hi! I am an software engineer currently working in the bay area. Workwise I am interested in writing distributed, highly scalable software, or software to process large data sets (sometimes these problems are not mutually exclusive).  My other interests lie in hiking/travelling (I am a recent transplant to the bay area, so there is plenty to discover), cooking, or playing games ( happens far too frequently). 
 
 ## Credits
 
